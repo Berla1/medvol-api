@@ -1,12 +1,21 @@
 package med.voll.med_voll.dto;
 
-public record EnderecoDTO(String logradouro,
-                          String bairro,
-                          String cep,
-                          String cidade,
-                          String uf,
-                          String numero,
-                          String complemento) {
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+
+public record EnderecoDTO(
+        @NotBlank
+        String logradouro,
+        @NotBlank
+        String bairro,
+        @NotBlank
+        @Pattern(regexp = "\\d{8}") // Indica que são 8 digitos que compoe o campo
+        String cep,
+        String cidade,
+        @NotBlank
+        String uf,
+        String numero,
+        String complemento) {
 
     @Override
     public String toString() {

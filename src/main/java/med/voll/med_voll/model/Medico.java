@@ -6,10 +6,9 @@ import med.voll.med_voll.dto.EspecialidadeDTO;
 import med.voll.med_voll.dto.MedicoDTO;
 
 @Entity
-@Table(name = "Medicos")
+@Table(name = "medicos")
 @Getter // Cria todos os getters
 @Setter // Cria todos os setters
-@NoArgsConstructor // Cria o construtor sem argumentos
 @AllArgsConstructor // Cria o construtor com todos os argumentos
 @EqualsAndHashCode(of = "id") // Compara se tem campos duplicados com base no ID e gera o hash code com base no ID
 public class Medico {
@@ -30,5 +29,8 @@ public class Medico {
         this.crm = dados.crm();
         this.especialidade = dados.especialidade();
         this.endereco = new Endereco(dados.endereco());
+    }
+
+    public Medico() {
     }
 }
