@@ -1,4 +1,7 @@
 package med.voll.med_voll.dto.medicos;
 
-public class MedicoAtualizarDTO {
+import jakarta.validation.constraints.NotNull;
+import med.voll.med_voll.dto.EnderecoDTO;
+
+public record MedicoAtualizarDTO(@NotNull Long id, String nome, String telefone, EnderecoDTO endereco) {
 }

@@ -3,6 +3,7 @@ package med.voll.med_voll.model;
 import jakarta.persistence.*;
 import lombok.*;
 import med.voll.med_voll.dto.medicos.EspecialidadeDTO;
+import med.voll.med_voll.dto.medicos.MedicoAtualizarDTO;
 import med.voll.med_voll.dto.medicos.MedicoDTO;
 
 @Entity
@@ -95,5 +96,19 @@ public class Medico {
     public Medico setEndereco(Endereco endereco) {
         this.endereco = endereco;
         return this;
+    }
+
+    public void atualizarInformacoes(MedicoAtualizarDTO dados) {
+        if(dados.nome() != null ){
+            this.nome = dados.nome();
+        }
+        if(dados.telefone() != null ){
+            this.telefone = dados.telefone();
+        }
+
+        if (dados.endereco() != null){
+            this.endereco.atualizarInformacoes(dados.endereco());
+        }
+
     }
 }
