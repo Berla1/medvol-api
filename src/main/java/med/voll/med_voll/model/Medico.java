@@ -22,6 +22,7 @@ public class Medico {
     private EspecialidadeDTO especialidade;
     @Embedded
     private Endereco endereco;
+    private Boolean ativo = true;
 
     public Medico(MedicoDTO dados) {
         this.nome = dados.nome();
@@ -110,5 +111,9 @@ public class Medico {
             this.endereco.atualizarInformacoes(dados.endereco());
         }
 
+    }
+
+    public void excluir() {
+        this.ativo = false;
     }
 }
