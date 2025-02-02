@@ -1,10 +1,9 @@
-package med.voll.med_voll.dto;
+package med.voll.med_voll.dto.pacientes;
 
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Pattern;
-import med.voll.med_voll.model.Endereco;
+import med.voll.med_voll.dto.EnderecoDTO;
 
 public record PacienteDTO(
         @NotBlank
@@ -13,7 +12,6 @@ public record PacienteDTO(
         @Email
         String email,
         @NotBlank
-        @Pattern(regexp = "\\d{3}\\.?\\d{3}\\.?\\d{3}\\-?\\d{2}")
         String cpf,
         @NotBlank
         String telefone,

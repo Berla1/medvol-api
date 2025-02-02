@@ -1,4 +1,4 @@
-package med.voll.med_voll.dto;
+package med.voll.med_voll.dto.medicos;
 
 import med.voll.med_voll.model.Medico;
 

@@ -3,7 +3,7 @@ package med.voll.med_voll.model;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 
-import med.voll.med_voll.dto.PacienteDTO;
+import med.voll.med_voll.dto.pacientes.PacienteDTO;
 
 @Entity
 @Table(name = "pacientes")
@@ -28,5 +28,59 @@ public class Paciente {
     }
 
     public Paciente() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public Paciente setId(Long id) {
+        this.id = id;
+        return this;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public Paciente setNome(String nome) {
+        this.nome = nome;
+        return this;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public Paciente setEmail(String email) {
+        this.email = email;
+        return this;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public Paciente setCpf(String cpf) {
+        this.cpf = cpf;
+        return this;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public Paciente setTelefone(String telefone) {
+        this.telefone = telefone;
+        return this;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public Paciente setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+        return this;
     }
 }

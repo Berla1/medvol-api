@@ -1,8 +1,8 @@
 package med.voll.med_voll.controller;
 
 import jakarta.validation.Valid;
-import med.voll.med_voll.dto.MedicoDTO;
-import med.voll.med_voll.dto.MedicoListagemDTO;
+import med.voll.med_voll.dto.medicos.MedicoDTO;
+import med.voll.med_voll.dto.medicos.MedicoListagemDTO;
 import med.voll.med_voll.model.Medico;
 import med.voll.med_voll.repository.MedicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +10,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/medicos")

@@ -2,8 +2,8 @@ package med.voll.med_voll.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-import med.voll.med_voll.dto.EspecialidadeDTO;
-import med.voll.med_voll.dto.MedicoDTO;
+import med.voll.med_voll.dto.medicos.EspecialidadeDTO;
+import med.voll.med_voll.dto.medicos.MedicoDTO;
 
 @Entity
 @Table(name = "medicos")
