@@ -2,9 +2,12 @@ package med.voll.med_voll.controller;
 
 import jakarta.validation.Valid;
 import med.voll.med_voll.dto.MedicoDTO;
+import med.voll.med_voll.dto.MedicoListagemDTO;
 import med.voll.med_voll.model.Medico;
 import med.voll.med_voll.repository.MedicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,5 +22,10 @@ public class MedicoController {
     @PostMapping
     public void cadastrarMedico(@RequestBody @Valid MedicoDTO dados){
         medicoRepository.save(new Medico(dados));
+    }
+
+    @GetMapping
+    public Page<MedicoListagemDTO> listarMedico(Pageable paginacao){
+        return medicoRepository.findAll(paginacao).map(MedicoListagemDTO::new);
     }
 }
