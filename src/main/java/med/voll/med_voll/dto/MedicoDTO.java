@@ -13,6 +13,9 @@ public record MedicoDTO(
         @Email
         String email,
         @NotBlank
+        @Pattern(regexp = "\\d{11}")
+        String telefone,
+        @NotBlank
         @Pattern(regexp = "\\d{4,6}") // o "\\d" indica que são digitos e o "4,6" indica que são de 4 a 6 digitos
         String crm,
         @NotNull
