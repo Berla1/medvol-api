@@ -40,6 +40,12 @@ public class MedicoController {
         return ResponseEntity.ok(page); // devolve 200
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity detalharMedico(@PathVariable Long id){
+        var medico = medicoRepository.getReferenceById(id);
+        return ResponseEntity.ok(new DetalhamentoMedicoDTO(medico)); // devolve o código 204(no content), ao inves do 200
+    }
+
     @PutMapping
     @Transactional
     public ResponseEntity atualizarMedico(@RequestBody  MedicoAtualizarDTO dados){
