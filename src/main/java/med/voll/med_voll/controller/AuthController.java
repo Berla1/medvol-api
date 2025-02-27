@@ -4,7 +4,7 @@ import jakarta.validation.Valid;
 import med.voll.med_voll.dto.auth.AuthDTO;
 import med.voll.med_voll.dto.auth.TokenJWTDTO;
 import med.voll.med_voll.model.Usuario;
-import med.voll.med_voll.service.security.TokenService;
+import med.voll.med_voll.service.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
