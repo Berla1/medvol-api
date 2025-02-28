@@ -7,6 +7,7 @@ MedVol API é uma aplicação desenvolvida em Java com Spring Boot para o gerenc
 - Criar, listar, atualizar e deletar médicos
 - Buscar médicos por especialidade
 - Validação de dados
+- Autenticação atrevés de token JWT
 
 ## 🛠️ Tecnologias Utilizadas
 
